@@ -1,0 +1,8 @@
+TOPIC: Textual Data Clusterization Based on Self-organizing Maps and Word Embeddings
+Description: 
+
+During the work, it will be necessary to propose a solution that allows 
+for the best possible grouping of data by context using word embedding 
+methods and self-organizing maps. The dataset is chosen at the student’s 
+discretion, and should already be labeled. Later, the results are validated 
+based on how well they were grouped by the proposed solution.
