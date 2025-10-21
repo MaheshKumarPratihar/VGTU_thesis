@@ -22,7 +22,7 @@
 
 ---
 
-## 📊 STEP 1: Word Embeddings
+## STEP 1: Word Embeddings
 
 ### Techniques & Hyperparameters
 
@@ -71,7 +71,7 @@
 
 ---
 
-## 📉 STEP 2: Dimensionality Reduction (Optional)
+## STEP 2: Dimensionality Reduction (Optional)
 
 ### Why Reduce Dimensions?
 - Computational efficiency for SOM training
@@ -155,7 +155,7 @@
 
 ---
 
-## 🎯 Y (OUTPUT): SOM Visualizations & Metrics
+## Y (OUTPUT): SOM Visualizations & Metrics
 
 ### Visualization Techniques
 
@@ -216,7 +216,7 @@
 
 ---
 
-## 🧪 Experimental Configuration Matrix
+## Experimental Configuration Matrix
 
 | Exp ID | Embedding | Vector Dim | Reduction | Reduced Dim | SOM Grid | Topology | Learning Rate | Iterations | Quantization Error | Silhouette |
 |--------|-----------|------------|-----------|-------------|----------|----------|---------------|------------|-------------------|------------|
@@ -231,7 +231,6 @@
 | E009   | BERT-Base | 768        | UMAP      | 50          | 20×20    | Hex      | 0.5 → 0.01    | 10000      | TBD               | TBD        |
 | E010   | BERT      | 768        | t-SNE     | 30          | 30×30    | Hex      | 0.6 → 0.01    | 12000      | TBD               | TBD        |
 | E011   | DistilBERT| 768        | PCA       | 75          | 20×20    | Rect     | 0.4 → 0.01    | 15000      | TBD               | TBD        |
-| ...    | ...       | ...        | ...       | ...         | ...      | ...      | ...           | ...        | ...               | ...        |
 
 ### Experiment Design Strategy
 
@@ -253,7 +252,7 @@
 
 ---
 
-## 🎯 Real-World Applications & Uses
+## Real-World Applications & Uses
 
 ### 1. **Document Organization & Management**
 - **Automatic document categorization**: Large repositories (legal, medical, corporate)
@@ -327,7 +326,7 @@
 
 ---
 
-## 🏆 Your Thesis Contribution
+## Thesis Contribution
 
 ### **Research Objectives**
 1. **Systematic exploration** of word embedding techniques for text clustering
@@ -392,24 +391,6 @@
 - Text preprocessing requirements
 - Language considerations
 - Domain-specific vocabulary
-
----
-
-## 📝 Presentation Tips
-
-### **For Your Professor**
-1. **Start with the problem**: Why is text clustering important?
-2. **Explain X → Y clearly**: Raw text transforms into organized clusters
-3. **Emphasize systematic approach**: Not random trial-and-error
-4. **Show measurable outcomes**: Quantitative metrics for comparison
-5. **Demonstrate practical value**: Real-world applications matter
-6. **Highlight novelty**: BERT + SOM is relatively unexplored
-
-### **Key Points to Emphasize**
-- The **completeness** of your exploration
-- The **reproducibility** of your experiments
-- The **practical value** of your findings
-- The **scientific rigor** of your methodology
 
 ---
 
