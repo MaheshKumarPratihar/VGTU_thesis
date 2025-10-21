@@ -6,7 +6,7 @@
 
 ---
 
-## 📊 The Complete Process Flow
+## The Complete Process Flow
 
 <table>
 <tr>
@@ -142,10 +142,10 @@
 ## STEP 2: Dimensionality Reduction (Optional)
 
 ### Why Reduce Dimensions?
-- ⚡ Computational efficiency for SOM training
-- 🎯 Noise reduction
-- 📊 Improved visualization
-- 🎨 Better clustering performance
+- Computational efficiency for SOM training
+- Noise reduction
+- Improved visualization
+- Better clustering performance
 
 <details open>
 <summary><b>PCA (Principal Component Analysis)</b></summary>
