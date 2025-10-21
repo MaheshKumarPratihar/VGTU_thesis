@@ -3,7 +3,7 @@
 
 ---
 
-## 🔷 The Complete Process Flow
+## The Complete Process Flow
 
 ### **X (INPUT) → PROCESSING PIPELINE → Y (OUTPUT)**
 
@@ -117,7 +117,7 @@
 
 ---
 
-## 🗺️ STEP 3: Self-Organizing Map (SOM) Training
+## STEP 3: Self-Organizing Map (SOM) Training
 
 ### SOM Hyperparameters
 
@@ -354,7 +354,7 @@
 
 ---
 
-## 📈 Evaluation Framework
+## Evaluation Framework
 
 ### **Quantitative Metrics**
 - Clustering quality scores (Silhouette, Davies-Bouldin, etc.)
@@ -373,7 +373,7 @@
 
 ---
 
-## 🔧 Implementation Considerations
+## Implementation Considerations
 
 ### **Software & Tools**
 - **Python libraries**: Gensim (Word2Vec, FastText), scikit-learn (PCA, t-SNE), MiniSom/SOMPY, Transformers (BERT)
@@ -391,17 +391,3 @@
 - Text preprocessing requirements
 - Language considerations
 - Domain-specific vocabulary
-
----
-
-## 🎓 Academic Contribution Summary
-
-**Research Question**: What is the optimal combination of word embeddings, dimensionality reduction, and SOM hyperparameters for textual clusterization?
-
-**Methodology**: Systematic experimental evaluation across multiple configurations
-
-**Evaluation**: Multi-metric quantitative assessment with qualitative validation
-
-**Output**: Best practice framework and empirical guidelines
-
-**Impact**: Practical tool for researchers and practitioners in text mining and NLP
