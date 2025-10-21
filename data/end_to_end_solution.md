@@ -12,7 +12,7 @@
 <tr>
 <td width="30%" bgcolor="#DBEAFE">
 
-### 🔵 X (Input)
+### X (Input)
 **Textual Dataset**
 - Documents/Articles
 - Reviews/Comments
@@ -22,7 +22,7 @@
 </td>
 <td width="40%" bgcolor="#F3E8FF">
 
-### 🔄 Processing Pipeline
+### Processing Pipeline
 
 **Step 1: Word Embeddings**
 - Word2Vec (CBOW/Skip-gram)
@@ -44,7 +44,7 @@
 </td>
 <td width="30%" bgcolor="#D1FAE5">
 
-### 🟢 Y (Output)
+### Y (Output)
 **SOM Visualization**
 - Cluster map
 - U-Matrix
@@ -63,7 +63,7 @@
 
 ---
 
-## 🔬 STEP 1: Word Embeddings
+## STEP 1: Word Embeddings
 
 <details open>
 <summary><b>Word2Vec</b></summary>
@@ -139,7 +139,7 @@
 
 ---
 
-## 📉 STEP 2: Dimensionality Reduction (Optional)
+## STEP 2: Dimensionality Reduction (Optional)
 
 ### Why Reduce Dimensions?
 - ⚡ Computational efficiency for SOM training
@@ -200,7 +200,7 @@ Decoder: [30 → 75 → 150 → 300]
 
 ---
 
-## 🗺️ STEP 3: Self-Organizing Map (SOM) Training
+## STEP 3: Self-Organizing Map (SOM) Training
 
 ### Grid Architecture
 
@@ -234,7 +234,7 @@ Decoder: [30 → 75 → 150 → 300]
 
 ---
 
-## 🎯 Y (OUTPUT): SOM Visualizations & Metrics
+## Y (OUTPUT): SOM Visualizations & Metrics
 
 ### Visualization Techniques
 
@@ -330,7 +330,7 @@ Decoder: [30 → 75 → 150 → 300]
 
 ---
 
-## 🧪 Experimental Configuration Matrix
+## Experimental Configuration Matrix
 
 | Exp ID | Embedding | Vector Dim | Reduction | Reduced Dim | SOM Grid | Topology | Learning Rate | Iterations | Quant. Error | Silhouette |
 |--------|-----------|------------|-----------|-------------|----------|----------|---------------|------------|--------------|------------|
@@ -347,7 +347,7 @@ Decoder: [30 → 75 → 150 → 300]
 | **E011** | DistilBERT | 768 | PCA | 75 | 20×20 | Rect | 0.4 → 0.01 | 15000 | TBD | TBD |
 | **...** | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
 
-### 📋 Experiment Design Strategy
+### Experiment Design Strategy
 
 ```mermaid
 graph TD
@@ -413,35 +413,35 @@ graph TD
 <tr>
 <td width="50%" valign="top">
 
-### 📄 Document Organization & Management
+### Document Organization & Management
 - **Automatic document categorization**: Legal, medical, corporate repositories
 - **Email classification**: Smart inbox management and auto-labeling
 - **News article clustering**: Topic-based organization
 - **Library systems**: Digital library organization
 - **Knowledge bases**: Automatic tagging and organization
 
-### 👥 Customer Intelligence & Sentiment Analysis
+### Customer Intelligence & Sentiment Analysis
 - **Review clustering**: Group similar customer feedback
 - **Product feedback analysis**: Identify issues and feature requests
 - **Support ticket routing**: Auto-assignment to departments
 - **Voice of customer (VoC)**: Aggregate opinions by theme
 - **Brand perception**: Monitor brand mentions and sentiment
 
-### 🎓 Research & Academic Applications
+### Research & Academic Applications
 - **Literature review**: Organize papers by research themes
 - **Research trend identification**: Discover emerging topics
 - **Citation network analysis**: Understand research communities
 - **Patent analysis**: Group patents, identify innovation gaps
 - **Bibliometric analysis**: Map scientific knowledge domains
 
-### 🎯 Content Discovery & Recommendation
+### Content Discovery & Recommendation
 - **Recommendation systems**: Suggest similar articles/products
 - **Content personalization**: User-specific content curation
 - **Similar item search**: Find related content
 - **Content gap analysis**: Identify missing topics
 - **Cross-selling opportunities**: Discover related products
 
-### 📱 Social Media & Web Analytics
+### Social Media & Web Analytics
 - **Trend detection**: Identify emerging discussions
 - **Community opinion mapping**: Understand public sentiment
 - **Influencer identification**: Find topic experts
@@ -451,35 +451,35 @@ graph TD
 </td>
 <td width="50%" valign="top">
 
-### 💼 Business Intelligence & Market Research
+### Business Intelligence & Market Research
 - **Competitive analysis**: Monitor competitor positioning
 - **Market segmentation**: Identify customer groups
 - **Product positioning**: Understand product landscape
 - **Customer journey mapping**: Analyze touchpoints
 - **Survey analysis**: Group open-ended responses
 
-### 🏥 Healthcare & Medical Applications
+### Healthcare & Medical Applications
 - **Clinical notes clustering**: Group similar patient cases
 - **Symptom analysis**: Identify disease patterns
 - **Medical literature organization**: Evidence-based medicine
 - **Drug interaction analysis**: From medical reports
 - **Patient feedback analysis**: Improve care quality
 
-### ⚖️ Legal & Compliance
+### Legal & Compliance
 - **Case law clustering**: Find similar legal precedents
 - **Contract analysis**: Group similar clauses
 - **Compliance monitoring**: Identify regulatory issues
 - **Due diligence**: Organize investigation documents
 - **E-discovery**: Legal document review
 
-### 📚 Education & E-Learning
+### Education & E-Learning
 - **Student essay clustering**: Identify common themes
 - **Course content organization**: Topic-based structuring
 - **Question categorization**: Auto-tag questions by topic
 - **Learning path recommendations**: Personalized content
 - **Assessment analysis**: Group similar answers
 
-### 🔒 Fraud Detection & Security
+### Fraud Detection & Security
 - **Fraud pattern detection**: Group suspicious activities
 - **Phishing detection**: Identify similar scam messages
 - **Incident clustering**: Group security events
@@ -492,24 +492,7 @@ graph TD
 
 ---
 
-## 🏆 Your Thesis Contribution
-
-<div align="center">
-
-### 🎯 Research Objectives
-
-</div>
-
-1. **Systematic exploration** of word embedding techniques for text clustering
-2. **Comparative analysis** of dimensionality reduction impact on clustering quality
-3. **Optimization framework** for SOM hyperparameters in text clustering
-4. **Best practice guidelines** for selecting appropriate configurations
-
-<table>
-<tr>
-<td width="50%">
-
-### 📊 Expected Outcomes
+### Expected Outcomes
 - ✅ Optimal embedding-SOM combinations identification
 - ✅ Understanding computational cost vs. quality trade-offs
 - ✅ Framework for technique selection
@@ -524,13 +507,7 @@ graph TD
 </td>
 <td width="50%">
 
-### 💡 Impact
-- 🎯 Informed decision-making for practitioners
-- 🎯 Reduced trial-and-error in pipeline design
-- 🎯 Baseline results for future research
-- 🎯 Multi-domain practical applications
-
-### 🔬 Research Question
+### Research Question
 **"What is the optimal combination of word embeddings, dimensionality reduction, and SOM hyperparameters for textual clusterization?"**
 
 </td>
@@ -539,7 +516,7 @@ graph TD
 
 ---
 
-## 📈 Evaluation Framework
+## Evaluation Framework
 
 <table>
 <tr>
@@ -580,7 +557,7 @@ graph TD
 
 ---
 
-## 🔧 Implementation Considerations
+## Implementation Considerations
 
 ### Software & Tools
 
@@ -605,74 +582,15 @@ graph TD
 
 ### Dataset Considerations
 
-- 📊 **Dataset size**: Number of documents and average length
-- 🌐 **Language**: Monolingual vs. multilingual
-- 📝 **Domain**: General vs. domain-specific vocabulary
-- 🧹 **Preprocessing**: Tokenization, stopwords, stemming/lemmatization
-- ⚖️ **Balance**: Class distribution in labeled datasets
+- **Dataset size**: Number of documents and average length
+- **Language**: Monolingual vs. multilingual
+- **Domain**: General vs. domain-specific vocabulary
+- **Preprocessing**: Tokenization, stopwords, stemming/lemmatization
+- **Balance**: Class distribution in labeled datasets
 
 ---
 
-## 📝 Presentation Tips for Your Professor
-
-### 🎤 Key Talking Points
-
-<table>
-<tr>
-<td width="50%">
-
-**Opening:**
-1. **Start with the problem**
-   - Information overload
-   - Need for automatic organization
-   - Real-world impact
-
-2. **Explain X → Y Framework**
-   - Clear input/output mapping
-   - Visual transformation journey
-   - Measurable outcomes
-
-3. **Emphasize Systematic Approach**
-   - Not random experimentation
-   - Structured methodology
-   - Reproducible results
-
-</td>
-<td width="50%">
-
-**Body:**
-4. **Show Measurable Outcomes**
-   - Multiple evaluation metrics
-   - Quantitative comparisons
-   - Statistical significance
-
-5. **Demonstrate Practical Value**
-   - Real-world applications
-   - Industry relevance
-   - Scalability potential
-
-6. **Highlight Novelty**
-   - BERT + SOM exploration
-   - Comprehensive comparison
-   - Complete pipeline analysis
-
-</td>
-</tr>
-</table>
-
-### 💡 Key Points to Emphasize
-
-> ✨ **Completeness**: Comprehensive exploration across all major embedding techniques
-> 
-> 🔬 **Reproducibility**: Well-documented experiments with open-source code
-> 
-> 🎯 **Practical Value**: Direct applicability to real-world problems
-> 
-> 📊 **Scientific Rigor**: Multi-metric evaluation with statistical validation
-
----
-
-## 📚 Academic Contribution Summary
+## Academic Contribution Summary
 
 <div align="center">
 
@@ -690,7 +608,7 @@ graph TD
 
 <div align="center">
 
-### 🎓 End-to-End Thesis Process
+### End-to-End Thesis Process
 
 **X (Raw Text)** → **Processing (Embeddings + Reduction + SOM)** → **Y (Clustered Visualization)**
 
@@ -700,7 +618,7 @@ graph TD
 
 ---
 
-## 📖 References & Further Reading
+## References & Further Reading
 
 - **Self-Organizing Maps**: Kohonen, T. (2001). Self-Organizing Maps
 - **Word2Vec**: Mikolov et al. (2013). Efficient Estimation of Word Representations
