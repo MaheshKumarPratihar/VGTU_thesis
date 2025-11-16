@@ -1,0 +1,91 @@
+@startuml TextClustering_UseCase_EndToEnd
+!theme cerulean-outline
+title GAI-Enhanced Text Clustering with SOM - Use Cases
+
+left to right direction
+
+actor "Researcher" as Researcher
+actor "Data Scientist" as DataScientist
+actor "Domain Expert" as Expert
+actor "System Admin" as Admin
+
+rectangle "Text Clustering System" {
+    usecase "Upload Text\nDataset" as UC1
+    usecase "Validate Data\nQuality" as UC2
+    usecase "Augment Dataset\n(GAI)" as UC3
+    usecase "Generate\nEmbeddings" as UC4
+    usecase "Configure SOM\nParameters" as UC5
+    usecase "Get Parameter\nSuggestions (GAI)" as UC6
+    usecase "Train SOM\nClusters" as UC7
+    usecase "Evaluate Cluster\nQuality" as UC8
+    usecase "Interpret Clusters\n(GAI)" as UC9
+    usecase "Visualize\nResults" as UC10
+    usecase "Compare Embedding\nMethods" as UC11
+    usecase "Export\nResults" as UC12
+    usecase "Review Flagged\nClusters" as UC13
+}
+
+' Researcher use cases
+Researcher --> UC1
+Researcher --> UC2
+Researcher --> UC4
+Researcher --> UC5
+Researcher --> UC7
+Researcher --> UC8
+Researcher --> UC10
+Researcher --> UC12
+
+' Data Scientist use cases
+DataScientist --> UC5
+DataScientist --> UC6
+DataScientist --> UC8
+DataScientist --> UC11
+
+' Domain Expert use cases
+Expert --> UC9
+Expert --> UC13
+Expert --> UC10
+
+' System Admin use cases
+Admin --> UC2
+
+' System relationships
+UC1 --> UC2 : triggers
+UC2 ..> UC3 : <<extend>>\nif imbalanced
+UC2 --> UC4 : if valid
+UC4 --> UC5 : enables
+UC5 ..> UC6 : <<extend>>\nfor suggestions
+UC5 --> UC7 : triggers
+UC7 --> UC8 : triggers
+UC8 --> UC9 : if quality OK
+UC8 ..> UC13 : <<extend>>\nif issues
+UC9 --> UC10 : enables
+UC10 --> UC12 : enables
+
+note right of UC3
+  GAI Enhancement #1:
+  Generates synthetic samples
+  for balanced training
+end note
+
+note right of UC6
+  GAI Enhancement #2:
+  Suggests optimal
+  SOM parameters
+end note
+
+note right of UC9
+  GAI Enhancement #3:
+  Automatically labels
+  and interprets clusters
+end note
+
+note bottom of UC12
+  PRIMARY OUTPUT:
+  - Cluster assignments
+  - Quality metrics
+  - GAI interpretations
+  - Visualizations
+end note
+
+@enduml
