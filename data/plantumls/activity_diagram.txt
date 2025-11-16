@@ -1,0 +1,124 @@
+@startuml TextClustering_Activity_EndToEnd
+!theme cerulean-outline
+title GAI-Enhanced Text Clustering with SOM - Workflow
+
+start
+:Receive Raw Text Dataset;
+note right: INPUT
+
+partition "Phase 1: Data Validation" {
+    if (Dataset Valid?) then (no)
+        :Display Error Messages;
+        note right
+          Fix format issues\n          Handle encoding problems\n          Resolve missing values
+        end note
+        stop
+    else (yes)
+    endif
+    
+    :Preprocess Text Data;
+    note right
+      - Clean & tokenize\n      - Remove stopwords\n      - Lemmatization
+    end note
+}
+
+partition "Phase 2: GAI Data Augmentation" {
+    :Analyze Class Distribution;
+    
+    if (Dataset Balanced?) then (no)
+        :GAI: Generate Synthetic Samples;
+        note right
+          Generate contextually\n          relevant text samples
+        end note
+        
+        if (Quality >= 0.85?) then (yes)
+            :Merge with Original Data;
+        else (no)
+            :GAI: Regenerate Samples;
+            :Validate Again;
+        endif
+    else (yes)
+    endif
+}
+
+partition "Phase 3: Embedding Generation" {
+    :Generate BERT Embeddings [n×768];
+    :Generate BoW Vectors [n×vocab];
+    :Generate Word2Vec [n×300];
+    
+    :Normalize All Embeddings;
+}
+
+partition "Phase 4: GAI Hyperparameter Optimization" {
+    :Analyze Embedding Statistics;
+    
+    :GAI: Suggest SOM Parameters;
+    note right
+      - Grid size: (10,10), (15,15), (20,20)\n      - Learning rate: 0.1, 0.5, 1.0\n      - Sigma: 1.0, 2.0, 3.0\n      - Iterations: 1000, 5000, 10000
+    end note
+    
+    :Create Hyperparameter Grid;
+}
+
+partition "Phase 5: SOM Training" {
+    :Initialize SOM with Config;
+    :Train SOM Model;
+    note right
+      - Find Best Matching Unit\n      - Update weights\n      - Decay parameters
+    end note
+    
+    :Assign Documents to Clusters;
+}
+
+partition "Phase 6: Cluster Quality Evaluation" {
+    :Calculate Silhouette Score;
+    :Calculate Davies-Bouldin Index;
+    :Calculate Calinski-Harabasz Score;
+    
+    if (Quality Score >= 0.70?) then (yes)
+    else (no)
+        :GAI: Analyze Issues;
+        if (Re-train?) then (yes)
+            :Adjust Parameters;
+            :Re-train SOM Model;
+        else (no)
+            :Flag for Manual Review;
+        endif
+    endif
+}
+
+partition "Phase 7: GAI Cluster Interpretation" {
+    :Extract Sample Documents;
+    
+    :GAI: Analyze Cluster Content;
+    note right
+      Generate semantic labels\n      Create summaries\n      Extract key themes
+    end note
+    
+    if (Confidence >= 0.80?) then (yes)
+    else (no)
+        :GAI: Re-analyze with More Context;
+        :Update Interpretation;
+    endif
+    
+    :Store Cluster Metadata;
+}
+
+partition "Phase 8: Visualization & Reporting" {
+    :Generate SOM Heatmap;
+    :Create t-SNE/UMAP Plot;
+    :Plot Silhouette Diagram;
+    :Generate Metric Comparison;
+    
+    :GAI: Create Executive Summary;
+    :Compile Final Report;
+}
+
+:Return Clustering Results;
+note right
+  OUTPUT:\n  - Cluster assignments\n  - Quality metrics\n  - Visualizations\n  - GAI insights
+end note
+
+stop
+
+@enduml
