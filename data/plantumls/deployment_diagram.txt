@@ -1,0 +1,93 @@
+@startuml TextClustering_Deployment_Simple
+!theme cerulean-outline
+title Text Clustering with SOM & GAI - Deployment Diagram
+
+' Client Layer
+node "Client Machine" as Client {
+    component "Web Browser" as Browser
+    component "Python Jupyter\nNotebook" as Jupyter
+}
+
+' Application Server
+node "Application Server" as AppServer {
+    component "Flask/FastAPI\nREST API" as API
+    component "Clustering Engine" as Engine {
+        component "Preprocessor"
+        component "Embedding Generator"
+        component "SOM Trainer"
+        component "Evaluator"
+    }
+}
+
+' GAI Service
+cloud "External GAI Service" as GAICloud {
+    component "OpenAI API" as OpenAI
+    component "Anthropic Claude API" as Claude
+}
+
+' ML Model Server (Optional - for BERT)
+node "GPU Server\n(Optional)" as GPUServer {
+    component "BERT Model\nInference" as BERT
+    component "Word2Vec Model" as W2V
+}
+
+' Database
+node "Database Server" as DBServer {
+    database "PostgreSQL" as DB {
+        storage "Embeddings"
+        storage "Results"
+        storage "Configurations"
+    }
+}
+
+' File Storage
+node "Storage Server" as Storage {
+    folder "File System" {
+        folder "Datasets"
+        folder "Trained Models"
+        folder "Visualizations"
+    }
+}
+
+' Connections
+Browser -down-> API : HTTPS/REST
+Jupyter -down-> API : HTTP API calls
+
+API -down-> Engine : Internal calls
+Engine -right-> GPUServer : gRPC\n(for BERT)
+Engine -down-> DB : SQL queries
+Engine -left-> GAICloud : HTTPS/API
+
+API -down-> Storage : File I/O
+Engine -down-> Storage : Read/Write
+
+note right of GAICloud
+  GAI Services:
+  - Data augmentation
+  - Hyperparameter suggestions
+  - Cluster interpretation
+end note
+
+note right of GPUServer
+  Optional:
+  Use for large-scale
+  BERT embeddings
+end note
+
+note bottom of DB
+  Stores:
+  - Embeddings cache
+  - Clustering results
+  - Quality metrics
+  - Configurations
+end note
+
+note bottom of Storage
+  Stores:
+  - Raw datasets
+  - Trained SOM models
+  - Result visualizations
+  - Export files (CSV/JSON)
+end note
+
+@enduml
