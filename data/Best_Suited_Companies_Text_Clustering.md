@@ -27,7 +27,7 @@ These companies handle large-scale unstructured text and need advanced clusterin
 - ServiceNow  
 
 **Why:**  
-Your workflow can automatically cluster support tickets, generate semantic labels, and summarize themes.
+Cluster support tickets, generate semantic labels, and summarize themes.
 
 ---
 
@@ -67,7 +67,7 @@ Clustering threat reports and logs helps detect patterns and emerging cyber thre
 - PubMed / NIH  
 
 **Why:**  
-Your system can cluster medical notes, research papers, and clinical documentation with explainability.
+Cluster medical notes, research papers, and clinical documentation with explainability.
 
 ---
 
@@ -86,11 +86,11 @@ They manage large document repositories and benefit from automated grouping, lab
 
 # Most Perfect Fit
 
-## ⭐ Customer Support / CRM Companies  
+## Customer Support / CRM Companies  
 (e.g., Zendesk, Salesforce, ServiceNow)
 
 **Reason:**  
-Your workflow directly tackles their core challenges:
+Tackles their core challenges:
 - High-volume unstructured text  
 - Need for topic discovery  
 - Automated semantic labeling  
