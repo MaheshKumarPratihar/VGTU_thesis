@@ -107,26 +107,6 @@ Metric calculation
 Result saving and visualization
 ```
 
-## Repository Structure
-
-A suggested repository structure is shown below:
-
-```text
-.
-├── datasets/                  # Input datasets
-├── notebooks/                 # Google Colab or Jupyter notebooks
-├── results/                   # CSV result files
-├── som_plots/                 # U-Matrix and SOM visualization outputs
-├── src/                       # Python source code
-│   ├── preprocessing.py
-│   ├── embeddings.py
-│   ├── som_training.py
-│   ├── evaluation.py
-│   └── visualization.py
-├── README.md
-└── requirements.txt
-```
-
 ## Installation
 
 Install the required Python packages:
